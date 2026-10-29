@@ -1,0 +1,9 @@
+project: savantenvs/md4c
+target: fuzz-mdhtml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mdhtml/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-mdhtml
+    libfuzzer: true
+    timeout: 5
