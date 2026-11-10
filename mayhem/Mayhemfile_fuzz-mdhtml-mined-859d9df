@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/md4c/fuzz-mdhtml
+project: savantenvs/md4c
+target: fuzz-mdhtml-mined-859d9df
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mdhtml-mined-859d9df/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-mdhtml
+    libfuzzer: true
+    timeout: 5
